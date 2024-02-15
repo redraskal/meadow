@@ -1,5 +1,5 @@
 {
-	"name": "timeline",
+	"name": "meadow",
 	"module": "index.ts",
 	"type": "module",
 	"devDependencies": {
@@ -12,8 +12,7 @@
 	},
 	"scripts": {
 		"prettier": "prettier --write .",
-		"migrate:gen": "drizzle-kit generate:sqlite --schema src/schema",
-		"migrate": "bun src/migrate"
+		"drizzle": "drizzle-kit generate:sqlite --schema src/schema"
 	},
 	"dependencies": {
 		"discord.js": "^14.14.1",

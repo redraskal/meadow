@@ -1,6 +1,6 @@
-# Timeline
+# Meadow
 
-A Discord bot for notifying users on sent messages with subscribed keywords/phrases.
+A Discord bot for notifying users on messages containing subscribed keywords/phrases.
 
 To install dependencies:
 
