@@ -1,0 +1,22 @@
+{
+	"name": "timeline",
+	"module": "index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@types/bun": "latest",
+		"drizzle-kit": "^0.20.14",
+		"prettier": "^3.2.5"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"prettier": "prettier --write .",
+		"migrate:gen": "drizzle-kit generate:sqlite --schema src/schema",
+		"migrate": "bun src/migrate"
+	},
+	"dependencies": {
+		"discord.js": "^14.14.1",
+		"drizzle-orm": "^0.29.3"
+	}
+}
