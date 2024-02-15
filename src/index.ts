@@ -73,8 +73,10 @@ const client = new Client({
 const rest = new REST().setToken(Bun.env.DISCORD_TOKEN);
 
 const subscriptions = new Subscriptions({
-	maxCachedAccounts: 1000,
-	maxPerAccount: 30,
+	maxCachedAccounts: Bun.env.SUBSCRIPTIONS_MAX_CACHED_ACCOUNTS
+		? Number(Bun.env.SUBSCRIPTIONS_MAX_CACHED_ACCOUNTS)
+		: 1000,
+	maxPerAccount: Bun.env.SUBSCRIPTIONS_MAX_PER_ACCOUNT ? Number(Bun.env.SUBSCRIPTIONS_MAX_PER_ACCOUNT) : 30,
 });
 
 if (Bun.env.REGISTER_COMMANDS) {
